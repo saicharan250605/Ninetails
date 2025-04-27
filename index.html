@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walking Lion Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* To ensure the lion doesn't scroll off-screen */
+      background-color: #f0f0f0; /* Add a subtle background color */
+    }
+
+    .lion-container {
+      position: absolute;
+      top: 50%; /* Center vertically */
+      left: 0;
+      transform: translateY(-50%); /* Adjust vertically to be in the middle */
+      animation: walkAcross 10s linear infinite; /* Control speed and looping */
+    }
+
+    .lion-video {
+      width: 200px; /* Adjust width of the video */
+      height: auto;
+      transform-origin: center center;
+      border-radius: 10px; /* Optional for rounded corners */
+    }
+
+    @keyframes walkAcross {
+      0% {
+        left: -250px; /* Start from outside the left side */
+      }
+      100% {
+        left: 100vw; /* End on the right side, across the entire viewport width */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="lion-container">
+    <video autoplay loop muted class="lion-video">
+      <source src="Whatsapp.mp4" type="video/mp4">
+      <!-- Alternatively, you can use a GIF or image sequence -->
+    </video>
+  </div>
+</body>
+</html>
